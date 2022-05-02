@@ -46,11 +46,24 @@ services:
       - zookeeper
       - kafka
       - kafdrop
-    networks: 
+    networks:
       - broker-kafka
     ports:
       - 3000:3000
 
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - 27017:27017
+    networks:
+      - broker-kafka
+
 networks:
   broker-kafka:
     driver: bridge
+
+volumes:
+  mongo_data:

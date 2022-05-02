@@ -49,6 +49,13 @@ gem 'wisper_kafka', '~> 0.1.0'
 gem 'racecar', '~> 2.3.0'
 gem 'rdkafka', '~> 0.8.1'
 
+# dependence on javascript application from turbolinks
+gem 'turbolinks', '~> 2.5', '>= 2.5.3'
+
+# Use to validate cpf/cnpj
+gem "validators"
+gem 'cpf_cnpj', '~> 0.2.1'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
